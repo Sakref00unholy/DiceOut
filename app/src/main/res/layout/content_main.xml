@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/holo_green_dark"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="phillipmayland.diceout.MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <TextView
+        android:id="@+id/rollResult"
+        android:layout_width="70dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="247dp"
+        android:layout_marginTop="247dp"
+        android:text="let's play"
+        android:textColor="@android:color/background_light"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_constraintBottom_creator="1"
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintTop_creator="1" />
+
+    <ImageView
+        android:id="@+id/die1Image"
+        android:layout_width="100dp"
+        android:layout_height="0dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/rollResult"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:src="@drawable/die_1"
+        app:layout_constraintBottom_toBottomOf="@+id/die2Image"
+        app:layout_constraintRight_toLeftOf="@+id/die2Image"
+        app:layout_constraintTop_toTopOf="@+id/die2Image"
+        tools:layout_constraintBottom_creator="1"
+        tools:layout_constraintTop_creator="1" />
+
+    <ImageView
+        android:id="@+id/die2Image"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/rollResult"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="39dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginTop="41dp"
+        android:src="@drawable/die_1"
+        app:layout_constraintBottom_toTopOf="@+id/rollResult"
+        app:layout_constraintRight_toLeftOf="@+id/die3Image"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:layout_constraintBottom_creator="1"
+        tools:layout_constraintTop_creator="1" />
+
+    <ImageView
+        android:id="@+id/die3Image"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/rollResult"
+        android:layout_marginEnd="30dp"
+        android:layout_marginStart="27dp"
+        android:src="@drawable/die_1"
+        app:layout_constraintBottom_toBottomOf="@+id/die2Image"
+        app:layout_constraintLeft_toRightOf="@+id/rollResult"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/die2Image"
+        tools:layout_constraintBottom_creator="1"
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintRight_creator="1"
+        tools:layout_constraintTop_creator="1" />
+
+    <TextView
+        android:id="@+id/scoreText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Score: 0"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="@android:color/background_light"
+        app:layout_constraintRight_toLeftOf="@+id/die3Image"
+        tools:layout_constraintTop_creator="1"
+        tools:layout_constraintRight_creator="1"
+        android:layout_marginTop="32dp"
+        app:layout_constraintTop_toBottomOf="@+id/die3Image" />
+</android.support.constraint.ConstraintLayout>
